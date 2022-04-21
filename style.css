@@ -1,5 +1,24 @@
 main {
+  z-index: 13;
+  background-color: #fbf6fc;
+  opacity: 0.8;
   color: #0e0a28;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #fbf6fc;
+  z-index: -1;
+  filter: blur(30px);
 }
 
 @property --percentage {
@@ -10,8 +29,8 @@ main {
 #chart {
   border-radius: 50%;
   border: 5px solid #adb900;
-  width: 80vmin;
-  height: 80vmin;
+  width: 50vh;
+  height: 50vh;
 }
 
 .animationOff {
@@ -37,14 +56,55 @@ main {
 }
 
 body {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
   height: 100vh;
+  width: 100vw;
   margin: 0;
   box-sizing: border-box;
   padding: 0;
   background-color: #fbf6fc;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  color: #0e0a28;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+#container {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(var(--rotate), #7670ae, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
+  animation: gradient-spin 45s linear infinite;
+  justify-content: center;
+}
+
+@keyframes gradient-spin {
+  0% {
+    --rotate: 0deg;
+  }
+  25% {
+    --rotate: 30deg;
+  }
+  75% {
+    --rotate: -30deg;
+  }
+  100% {
+    --rotate: 0deg;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

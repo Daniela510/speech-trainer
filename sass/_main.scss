@@ -1,4 +1,23 @@
 @use "variables" as var;
-main{
+main {
+  z-index: 13;
+  background-color: var.$c-light;
+  opacity: 0.8;
   color: var.$c-dark;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  //filter: blur(9px);
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var.$c-light;
+  z-index: -1;
+  filter: blur(30px);
 }
