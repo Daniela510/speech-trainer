@@ -1,0 +1,19 @@
+.footer {
+  width: 90vw;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  &__child {
+    padding-top: 0.5vh;
+    padding-bottom: 2vh;
+  }
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+}
+.footer ul li {
+  padding: 0 2vh;
+}

@@ -116,6 +116,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-image: linear-gradient(var(--rotate), #7670ae, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
   animation: gradient-spin 45s linear infinite;
@@ -136,7 +137,7 @@ body {
     --rotate: 0deg;
   }
 }
-ul {
+main ul {
   list-style-position: outside;
   list-style-type: circle;
   margin-bottom: 2vh;
@@ -148,6 +149,47 @@ ul {
   font-weight: bold;
   margin-top: 1vh;
   margin-bottom: 2vh;
+}
+
+header {
+  position: absolute;
+  top: 0;
+}
+
+header ul {
+  padding-bottom: 0.5vh;
+  padding-top: 2vh;
+  width: 90vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+header ul li {
+  padding: 0 2vh;
+}
+
+.footer {
+  width: 90vw;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+.footer__child {
+  padding-top: 0.5vh;
+  padding-bottom: 2vh;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer ul li {
+  padding: 0 2vh;
 }
 
 /*# sourceMappingURL=style.css.map */
