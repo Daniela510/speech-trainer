@@ -1,7 +1,29 @@
+@use "variables" as var;
 .startActive{
-    display: block;
+    opacity: 1;
   }
   .startOff{
-    display: none;
+    opacity: 0.2;
   }
-  
+#start{
+    margin-top: 1vh;
+    font-size: 1rem;
+background-color: var.$c-blue;
+padding: 1vh 3vh;
+border: 0px solid var.$c-blue;
+border-radius: 2.5vh;
+color: var.$c-light;
+transition: 1s ease;
+&:hover{
+    background-color:  var.$c-pink;
+}
+&:before{
+    content: "";
+  position: absolute;
+  height: 3vh;
+  width: 7vh;
+  background:  var.$c-pink;
+  z-index: -1;
+  filter: blur(15px);
+}
+}  

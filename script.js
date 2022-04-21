@@ -39,14 +39,14 @@ const addSpice = () => {
 };
 const cleanSlate = () => {
   topicContainer.innerHTML = "Done! Wanna play again?";
-  animationContainer.classList.remove("animationOn");
   animationContainer.classList.add("animationOff");
+  animationContainer.classList.remove("animationOn");
   startBtn.classList.remove("startOff");
   startBtn.classList.add("startActive")
   let wordConainer;
   for (let i = 1; i < 6; i++) {
     wordConainer = document.getElementById(`w${i}`);
-    wordConainer.innerHTML = "spice word";
+    wordConainer.innerHTML = "-------------------";
   }
 }
 

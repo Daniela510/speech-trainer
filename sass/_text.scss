@@ -1,0 +1,15 @@
+@use "variables" as var;
+
+ul {
+  list-style-position: outside;
+  list-style-type: circle;
+  margin-bottom: 2vh;
+}
+
+#countdown{
+    color:var.$c-greener;
+    font-size: 1.17rem;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}

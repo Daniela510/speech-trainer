@@ -27,10 +27,12 @@ main::before {
   syntax: "<percentage>";
 }
 #chart {
+  margin-top: 3vh;
   border-radius: 50%;
   border: 5px solid #adb900;
-  width: 50vh;
-  height: 50vh;
+  width: 45vh;
+  height: 45vh;
+  transition: 0.2s ease;
 }
 
 .animationOff {
@@ -48,11 +50,39 @@ main::before {
   }
 }
 .startActive {
-  display: block;
+  opacity: 1;
 }
 
 .startOff {
-  display: none;
+  opacity: 0.2;
+}
+
+#start {
+  margin-top: 1vh;
+  font-size: 1rem;
+  background-color: #7670ae;
+  padding: 1vh 3vh;
+  border: 0px solid #7670ae;
+  border-radius: 2.5vh;
+  color: #fbf6fc;
+  transition: 1s ease;
+}
+#start:hover {
+  background-color: #f79ff6;
+}
+#start:before {
+  content: "";
+  position: absolute;
+  height: 3vh;
+  width: 7vh;
+  background: #f79ff6;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+h1, h2, h3, ul, p, button {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -105,6 +135,19 @@ body {
   100% {
     --rotate: 0deg;
   }
+}
+ul {
+  list-style-position: outside;
+  list-style-type: circle;
+  margin-bottom: 2vh;
+}
+
+#countdown {
+  color: #628e1f;
+  font-size: 1.17rem;
+  font-weight: bold;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
 }
 
 /*# sourceMappingURL=style.css.map */
