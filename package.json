@@ -1,0 +1,30 @@
+{
+  "name": "speech-trainer",
+  "version": "1.0.0",
+  "description": "Trains your public speaking abilities by generating topic plus random words to incorporate",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch ./sass/style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniela510/speech-trainer.git"
+  },
+  "keywords": [
+    "speech",
+    "public",
+    "speaking",
+    "generate",
+    "topics",
+    "words"
+  ],
+  "author": "Daniela Damaschin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daniela510/speech-trainer/issues"
+  },
+  "homepage": "https://github.com/Daniela510/speech-trainer#readme"
+}

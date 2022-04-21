@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["sass/_main.scss","sass/_variables.scss","sass/_timer.scss","sass/_btn.scss","sass/_base.scss"],"names":[],"mappings":"AACA;EACE,OCDO;;;ACAT;EACI;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAEF;EACE,YDRM;;;ACUR;EACE;EACA;;;AAGF;EACE;IACE;;;ACvBN;EACI;;;AAEF;EACE;;;ACHJ;EACE;EACA;EACA;EACA;EACA,kBHNQ;EGOR;EACA;EACA,OHRO","file":"style.css"}

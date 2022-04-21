@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <title>Speech Trainer</title>
 </head>
+
 <body>
-    <h3>Let's talk about:</h3>
-    <h1 id="topic">Topic here</h1>
-    <p id="countdown">2:00</p>
-    <p id="w1">- </p>
-    <p id="w2">- </p>
-    <p id="w3">- </p>
-    <p id="w4">- </p>
-    <button id="start">start</button>
-    <script src="script.js" ></script>
+    <main>
+        <h3>Let's talk about:</h3>
+        <h1 id="topic">Click start to get a prompt!</h1>
+        <div id="chart" class="animationOff"></div>
+        <p id="countdown">2:00</p>
+        <ul>
+            <li id="w1">spice word</li>
+            <li id="w2">spice word</li>
+            <li id="w3">spice word</li>
+            <li id="w4">spice word</li>
+            <li id="w5">spice word</li>
+        </ul>
+    <button id="start" class="startActive" onclick="startCountdown()">start</button>
+</main>
+    <script src="script.js"></script>
 </body>
+
 </html>

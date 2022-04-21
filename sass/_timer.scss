@@ -1,0 +1,27 @@
+@use "variables" as var;
+@property --percentage {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+  }
+  
+  #chart {
+    border-radius: 50%;
+    border: 5px solid var.$c-green;
+    width: 80vmin;
+    height: 80vmin;
+  }
+  .animationOff {
+    background: var.$c-green;
+  }
+  .animationOn {
+    background: conic-gradient(var.$c-green var(--percentage), var.$c-light 0);
+    animation: timer 120s linear;
+  }
+  
+  @keyframes timer {
+    to {
+      --percentage: 100%;
+    }
+  }
+  

@@ -1,5 +1,5 @@
 const startMinutes = 2;
-let time; 
+let time;
 let countActive = 0;
 let topics = [];
 let spices = [];
@@ -20,21 +20,35 @@ fetchSpices();
 const startBtn = document.getElementById("start");
 const countdownP = document.getElementById("countdown");
 const topicContainer = document.getElementById("topic");
+const animationContainer = document.getElementById("chart");
 
 const addSpice = () => {
-  if (spiceTracker < 5) {
+  if (spiceTracker < 6) {
     const wordConainer = document.getElementById(`w${spiceTracker}`);
-    let spice = spices[Math.floor(Math.random()*spices.length)];
-    wordConainer.innerHTML ="- " + spice;
+    let spice = spices[Math.floor(Math.random() * spices.length)];
+    wordConainer.innerHTML = spice;
     spiceTracker++;
-    console.log('active interval, next is: ', spiceTracker);
-  } else {
-    console.log('interval over');
+    console.log("active interval, next is: ", spiceTracker);
+  } 
+  if(spiceTracker == 6) {
+    console.log("interval over");
     clearInterval(spiceIntervalID);
     spiceIntervalID = null;
     spiceTracker = 1;
   }
-  };
+};
+const cleanSlate = () => {
+  topicContainer.innerHTML = "Done! Wanna play again?";
+  animationContainer.classList.remove("animationOn");
+  animationContainer.classList.add("animationOff");
+  startBtn.classList.remove("startOff");
+  startBtn.classList.add("startActive")
+  let wordConainer;
+  for (let i = 1; i < 6; i++) {
+    wordConainer = document.getElementById(`w${i}`);
+    wordConainer.innerHTML = "spice word";
+  }
+}
 
 const updateCountdown = () => {
   //this conditional stops the setInterval from affecting the countdown before pressing start
@@ -48,19 +62,23 @@ const updateCountdown = () => {
     } else {
       console.log(`${startMinutes} minutes passed`);
       countActive = 0;
+      cleanSlate();
     }
   }
 };
 
 setInterval(updateCountdown, 1000);
 
-
 const startCountdown = () => {
   time = startMinutes * 60;
   countActive = 1;
-  let topic = topics[Math.floor(Math.random()*topics.length)];
+  let topic = topics[Math.floor(Math.random() * topics.length)];
   topicContainer.innerHTML = topic;
-  spiceIntervalID = setInterval(addSpice, 25000);
+  spiceIntervalID = setInterval(addSpice, 20000);
+  animationContainer.classList.remove("animationOff");
+  animationContainer.classList.add("animationOn");
+  startBtn.classList.remove("startActive");
+  startBtn.classList.add("startOff");
 };
 
-startBtn.addEventListener("click", startCountdown);
+//startBtn.addEventListener("click", startCountdown);
