@@ -9,9 +9,9 @@
     margin-top: 1vh;
     font-size: 1rem;
 background-color: var.$c-blue;
-padding: 1vh 3vh;
+padding: .7rem 1.5rem;
 border: 0px solid var.$c-blue;
-border-radius: 2.5vh;
+border-radius: 1.5rem;
 transition: 1s ease;
 &:hover{
     background-color:  var.$c-pink;
@@ -19,8 +19,8 @@ transition: 1s ease;
 &:before{
     content: "";
   position: absolute;
-  height: 3vh;
-  width: 7vh;
+  height: 2rem;
+  width: 4rem;
   background-color:  var.$c-pink;
   opacity: 0.6;
   z-index: -1;

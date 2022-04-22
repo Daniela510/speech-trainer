@@ -1,5 +1,42 @@
 @use "variables" as var;
 
-#rules{
-    z-index: 20 !important;
+.rules{
+    opacity: 0;
+    position: relative;
+    display: block;
+    top: 4vh;
+    width: 70vw;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: .5s ease;
+    &__titles{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1vh;
+    }
+}
+.rules ul{
+    list-style-position: inside;
+    padding: 0.5rem;
+}
+.rules p{
+    padding: 0.5rem;
+}
+.rules button{
+    opacity: 0.9;
+    padding: .4rem .9rem;
+    background-color: var.$c-light;
+border:1px solid var.$c-blue;
+border-radius: 1rem;
+color: var.$c-blue;
+cursor: pointer;
+}
+.rules-day{
+    background-color: var.$c-light;
+    color: var.$c-blue;
+}
+.rules-night{
+    background-color: var.$c-greener;
+    color: var.$c-light;
 }

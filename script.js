@@ -74,6 +74,7 @@ const startCountdown = () => {
   countActive = 1;
   let topic = topics[Math.floor(Math.random() * topics.length)];
   topicContainer.innerHTML = topic;
+  spiceTimeout = setTimeout(addSpice, 10000)
   spiceIntervalID = setInterval(addSpice, 20000);
   animationContainer.classList.remove("animationOff");
   animationContainer.classList.add("animationOn");

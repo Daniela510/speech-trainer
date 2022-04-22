@@ -5,10 +5,23 @@ const header = document.getElementById("header");
 const start = document.getElementById("start");
 const chart = document.getElementById("chart");
 const themeBtn = document.getElementById("themeBtn");
+const rules = document.getElementById("rules");
+
+const openRules = () => {
+  rules.style.opacity = "1";
+  rules.style.top = "6vh"
+}
+const closeRules = () => {
+  rules.style.opacity = "0";
+  rules.style.top = "4vh"
+}
+
 let theme = "day";
 
 const switchTheme = () => {
 if (theme == "day"){
+    rules.classList.add("rules-night");
+    rules.classList.remove("rules-day");
     gradient.classList.remove("day");
     gradient.classList.add("night");
     main.classList.remove("main-day");
@@ -26,6 +39,8 @@ if (theme == "day"){
     console.log("theme switched to ", theme);
 } else {
 if (theme == "night"){
+    rules.classList.add("rules-day");
+    rules.classList.remove("rules-night");
     gradient.classList.remove("night");
     gradient.classList.add("day");
     main.classList.remove("main-night");

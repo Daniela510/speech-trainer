@@ -85,9 +85,9 @@ main::before {
   margin-top: 1vh;
   font-size: 1rem;
   background-color: #7670ae;
-  padding: 1vh 3vh;
+  padding: 0.7rem 1.5rem;
   border: 0px solid #7670ae;
-  border-radius: 2.5vh;
+  border-radius: 1.5rem;
   transition: 1s ease;
 }
 #start:hover {
@@ -96,8 +96,8 @@ main::before {
 #start:before {
   content: "";
   position: absolute;
-  height: 3vh;
-  width: 7vh;
+  height: 2rem;
+  width: 4rem;
   background-color: #f79ff6;
   opacity: 0.6;
   z-index: -1;
@@ -122,7 +122,8 @@ body {
   display: block;
   top: 0;
   left: 0;
-  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100vw;
   margin: 0;
   box-sizing: border-box;
@@ -261,6 +262,52 @@ header ul li {
 }
 .footer-day__child {
   color: #0e0a28;
+}
+
+.rules {
+  opacity: 0;
+  position: relative;
+  display: block;
+  top: 4vh;
+  width: 70vw;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  transition: 0.5s ease;
+}
+.rules__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+}
+
+.rules ul {
+  list-style-position: inside;
+  padding: 0.5rem;
+}
+
+.rules p {
+  padding: 0.5rem;
+}
+
+.rules button {
+  opacity: 0.9;
+  padding: 0.4rem 0.9rem;
+  background-color: #fbf6fc;
+  border: 1px solid #7670ae;
+  border-radius: 1rem;
+  color: #7670ae;
+  cursor: pointer;
+}
+
+.rules-day {
+  background-color: #fbf6fc;
+  color: #7670ae;
+}
+
+.rules-night {
+  background-color: #628e1f;
+  color: #fbf6fc;
 }
 
 /*# sourceMappingURL=style.css.map */
