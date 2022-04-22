@@ -46,8 +46,8 @@ main::before {
 }
 @media (max-aspect-ratio: 1/1) {
   #chart {
-    width: 75vw;
-    height: 75vw;
+    width: 70vw;
+    height: 70vw;
   }
 }
 
