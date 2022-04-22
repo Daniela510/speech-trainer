@@ -80,5 +80,3 @@ const startCountdown = () => {
   startBtn.classList.remove("startActive");
   startBtn.classList.add("startOff");
 };
-
-//startBtn.addEventListener("click", startCountdown);

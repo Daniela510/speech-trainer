@@ -16,6 +16,7 @@ main::before {
   background-color: inherit;
   z-index: -1;
   filter: blur(30px);
+  pointer-events: none;
 }
 
 .main-night {
@@ -131,13 +132,18 @@ body {
   text-align: left;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
 #container {
-  z-index: 0;
+  z-index: -1 !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -201,10 +207,13 @@ header ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 header ul li {
   padding: 0 2vh;
+  pointer-events: all;
 }
 
 .ul-night {

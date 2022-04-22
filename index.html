@@ -10,20 +10,37 @@
 </head>
 
 <body>
-    <div id="container" class="night">
+    <!-- <div id="rules">
+        <div class="rules__titles">
+            <h3>How to play?</h3>
+            <button>x</button>
+        </div>
+        <p>Click "start" to get a prompt. Then for 2 minutes talk about the subject, its that easy! </p>
+        <p>This is a tool so there are some goals other than the time:</p>
+        <ul>
+            <li>Be coherent, your speech must flow.</li>
+            <li>No "uhms", "eeh", "ugh", these disqualify the speech.</li>
+            <li>Incorporate the spice words given underneath</li>
+            <li></li>
+        </ul>
+        <p>A successfull game is a nice speech that flows with no uhms & ughs. If someone where to listen to you they must not understand what were the spice words.
+            You can record yourself or play with friends to have feedback on how are you doing and hold you accountable for all the uhms & ughs.</p>
+            <p>Not so easy once you try, huh?</p>
+    </div> -->
+    <div id="container" class="day">
         <header>
-            <ul class="ul-night">
+            <ul id="header" class="ul-day">
                 <li>?</li>
                 <li>speaksie</li>
-                <li>☾</li>
+                <li id="themeBtn" onclick="switchTheme()">☾</li>
             </ul>
         </header>
-        <main class="main-night">
+        <main id="main" class="main-day">
             <div class="titles">
                 <h3>Let's talk about:</h3>
                 <h1 id="topic">Click start for a topic!</h1>
             </div>
-            <div id="chart" class="animationOff chart-night"></div>
+            <div id="chart" class="animationOff chart-day"></div>
             <p id="countdown">2:00</p>
             <ul>
                 <li id="w1">-------------------</li>
@@ -32,17 +49,18 @@
                 <li id="w4">-------------------</li>
                 <li id="w5">-------------------</li>
             </ul>
-            <button id="start" class="startActive dark" onclick="startCountdown()">start</button>
+            <button id="start" class="startActive light" onclick="startCountdown()">start</button>
         </main>
-        <footer class="footer footer-night">
+        <footer id="footer" class="footer footer-day">
             <p class="footer__child">by Daniela Damaschin </p>
             <ul class="footer__child">
                 <li> <a href="https://github.com/Daniela510">github</a></li>
-                <li><a href="">linkedin</a></li>
+                <li><a href="https://www.linkedin.com/in/daniela-damaschin/">linkedin</a></li>
             </ul>
         </footer>
     </div>
     <script src="script.js"></script>
+    <script src="theme.js"></script>
 </body>
 
 </html>

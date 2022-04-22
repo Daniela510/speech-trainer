@@ -16,6 +16,7 @@ main::before {
   background-color: inherit;
   z-index: -1;
   filter: blur(30px);
+  pointer-events: none;
 }
 .main-night{
   background-color: var.$c-dark;
