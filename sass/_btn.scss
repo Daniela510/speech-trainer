@@ -12,7 +12,6 @@ background-color: var.$c-blue;
 padding: 1vh 3vh;
 border: 0px solid var.$c-blue;
 border-radius: 2.5vh;
-color: var.$c-light;
 transition: 1s ease;
 &:hover{
     background-color:  var.$c-pink;
@@ -22,8 +21,15 @@ transition: 1s ease;
   position: absolute;
   height: 3vh;
   width: 7vh;
-  background:  var.$c-pink;
+  background-color:  var.$c-pink;
+  opacity: 0.6;
   z-index: -1;
   filter: blur(15px);
 }
 }  
+.dark{
+    color: var.$c-dark;  
+}
+.light{
+    color: var.$c-light;
+}

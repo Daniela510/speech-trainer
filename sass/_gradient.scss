@@ -17,6 +17,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+      animation: gradient-spin 50s linear infinite;
+    justify-content: center;
+  }
+ .day{
     background-image: linear-gradient(
         var(--rotate),
         var.$c-blue,
@@ -25,8 +29,16 @@
         var.$c-light,
         var.$c-green
       );
-      animation: gradient-spin 45s linear infinite;
-    justify-content: center;
+  }
+  .night{
+    background-image: linear-gradient(
+        var(--rotate),
+        var.$c-pink,
+        var.$c-blue,
+        var.$c-greener 45%,
+        var.$c-dark,
+        var.$c-green
+      );
   }
   
   @keyframes gradient-spin {
@@ -34,10 +46,10 @@
         --rotate: 0deg;
       }
       25%{
-          --rotate: 30deg;
+          --rotate: 40deg;
       }
       75%{
-        --rotate: -30deg;
+        --rotate: -40deg;
     }
       100% {
         --rotate: 0deg;

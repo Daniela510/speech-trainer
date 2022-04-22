@@ -1,10 +1,10 @@
+@use "variables" as var;
 .footer {
   width: 90vw;
   position: absolute;
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid black;
   &__child {
     padding-top: 0.5vh;
     padding-bottom: 2vh;
@@ -16,4 +16,18 @@
 }
 .footer ul li {
   padding: 0 2vh;
+}
+.footer-night{
+  border-top: 1px solid var.$c-light;
+  color: var.$c-light;
+  &__child{
+    color: var.$c-light;
+  }
+}
+.footer-day{
+  border-top: 1px solid var.$c-dark;
+  color: var.$c-dark;
+  &__child{
+    color: var.$c-dark;
+  }
 }
