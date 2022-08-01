@@ -5,17 +5,43 @@
     inherits: false;
     syntax: "<percentage>";
   }
-  
-  #chart {
-    margin-top: 3vh;
-    border-radius: 50%;
-    border: 5px solid var.$c-green;
+  #chart{
+    margin-top: 2vh;
     @include mixin.narrow{
-      width:70vw;
-      height: 70vw;
+      width: 65vw;
+      height: 65vw;
     }
     width: 50vh;
     height: 50vh;
+  }
+  #chart-moving {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    @include mixin.narrow{
+      width:65vw;
+      height: 65vw;
+    }
+    width: 50vh;
+    height: 50vh;
+    top:5px;
+    left:5px;
+    transition: 0.2s ease;
+  }
+  #chart-border {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid var.$c-green;
+    @include mixin.narrow{
+      width: 65vw;
+      height: 65vw;
+      top:-65vw;
+    }
+    width: 50vh;
+    height: 50vh;
+    top:-50vh;
     transition: 0.2s ease;
   }
   .chart-day{

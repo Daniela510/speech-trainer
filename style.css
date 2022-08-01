@@ -37,17 +37,50 @@ main::before {
   syntax: "<percentage>";
 }
 #chart {
-  margin-top: 3vh;
+  margin-top: 2vh;
+  width: 50vh;
+  height: 50vh;
+}
+@media (max-aspect-ratio: 1/1) {
+  #chart {
+    width: 65vw;
+    height: 65vw;
+  }
+}
+
+#chart-moving {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  width: 50vh;
+  height: 50vh;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s ease;
+}
+@media (max-aspect-ratio: 1/1) {
+  #chart-moving {
+    width: 65vw;
+    height: 65vw;
+  }
+}
+
+#chart-border {
+  position: relative;
+  display: block;
   border-radius: 50%;
   border: 5px solid #adb900;
   width: 50vh;
   height: 50vh;
+  top: -50vh;
   transition: 0.2s ease;
 }
 @media (max-aspect-ratio: 1/1) {
-  #chart {
-    width: 70vw;
-    height: 70vw;
+  #chart-border {
+    width: 65vw;
+    height: 65vw;
+    top: -65vw;
   }
 }
 
@@ -82,10 +115,10 @@ main::before {
 }
 
 #start {
-  margin-top: 1vh;
+  margin: 0;
   font-size: 1rem;
   background-color: #7670ae;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 0px solid #7670ae;
   border-radius: 1.5rem;
   transition: 1s ease;
@@ -156,32 +189,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: gradient-spin 50s linear infinite;
   justify-content: center;
 }
 
 .day {
-  background-image: linear-gradient(var(--rotate), #7670ae, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
+  background-image: linear-gradient(212deg, #7670ae, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
 }
 
 .night {
-  background-image: linear-gradient(var(--rotate), #f79ff6, #7670ae, #628e1f 45%, #0e0a28, #adb900);
+  background-image: linear-gradient(212deg, #f79ff6, #7670ae, #628e1f 45%, #0e0a28, #adb900);
 }
 
-@keyframes gradient-spin {
-  0% {
-    --rotate: 0deg;
-  }
-  25% {
-    --rotate: 40deg;
-  }
-  75% {
-    --rotate: -40deg;
-  }
-  100% {
-    --rotate: 0deg;
-  }
-}
 main ul {
   list-style-position: outside;
   list-style-type: circle;
