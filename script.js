@@ -81,3 +81,15 @@ const startCountdown = () => {
   startBtn.classList.remove("startActive");
   startBtn.classList.add("startOff");
 };
+
+// hi there 
+// why are you here?
+// this is not for your eyes.
+// this is the disturbing underbelly
+// could i have just sat down and coded for 15 minutes?
+// yesss
+// but the thought of somone ever finding this
+// its funny
+// i need a lil thrill in my life
+// yknow..
+// yknow???
