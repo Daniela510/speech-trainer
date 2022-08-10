@@ -1,66 +1,49 @@
 @use "variables" as var;
 @use "mixin";
-@property --percentage {
-    initial-value: 0%;
-    inherits: false;
-    syntax: "<percentage>";
+#chart {
+  margin-top: 2vh;
+  @include mixin.narrow {
+    width: 60vw;
+    height: 60vw;
   }
-  #chart{
-    margin-top: 2vh;
-    @include mixin.narrow{
-      width: 65vw;
-      height: 65vw;
-    }
-    width: 50vh;
-    height: 50vh;
-  }
-  #chart-moving {
-    position: relative;
-    display: block;
-    border-radius: 50%;
-    border: none;
-    @include mixin.narrow{
-      width:65vw;
-      height: 65vw;
-    }
-    width: 50vh;
-    height: 50vh;
-    top:5px;
-    left:5px;
-    transition: 0.2s ease;
-  }
-  #chart-border {
-    position: relative;
-    display: block;
-    border-radius: 50%;
-    border: 5px solid var.$c-green;
-    @include mixin.narrow{
-      width: 65vw;
-      height: 65vw;
-      top:-65vw;
-    }
-    width: 50vh;
-    height: 50vh;
-    top:-50vh;
-    transition: 0.2s ease;
-  }
-  .chart-day{
-    opacity: 1;
-  }
-  .chart-night{
-    opacity: 0.7;
-  }
-  .animationOff {
-    background: var.$c-green;
-  }
-  .animationOn {
-    background: conic-gradient(var.$c-green var(--percentage), var.$c-light 0);
-    animation: timer 120s linear;
-  }
-  
-  @keyframes timer {
-    to {
-      --percentage: 100%;
-    }
-  }
-  
+  width: 50vh;
+  height: 50vh;
+}
+#chart-inner {
+  background-color: var.$c-green;
+  top: -1%;
+  left: -1%; 
+  width: 101%; 
+  height: 101%; 
+  position: relative;
+  border: 1px solid var.$c-green;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+#chart-outer {
+  position: relative;
+  background-color: white;
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+  border: 5px solid var.$c-green;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+.chart-day {
+  opacity: 1;
+}
+.chart-night {
+  opacity: 0.7;
+}
+.animationOff {
+  background: var.$c-green;
+}
+.animationOn {
+  animation: timer 120s linear;
+}
+
+@keyframes timer {
+  from {width: 1%; height:1%; top: 50%; left:50%;}
+   to {width: 101%; height:101%;top: -1%; left:-1%;}
+   }

@@ -20,7 +20,7 @@ fetchSpices();
 const startBtn = document.getElementById("start");
 const countdownP = document.getElementById("countdown");
 const topicContainer = document.getElementById("topic");
-const animationContainer = document.getElementById("chart");
+const animationContainer = document.getElementById("chart-inner");
 
 const addSpice = () => {
   if (spiceTracker < 6) {
