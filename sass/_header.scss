@@ -24,4 +24,9 @@ header ul li{
 .ul-day{
     border-bottom: 1px solid var.$c-dark;
     color:var.$c-dark;
+    background-image: linear-gradient( 
+        180deg,
+        var.$c-transparent,
+        var.$c-transparenter
+      );
 }

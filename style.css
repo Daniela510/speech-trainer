@@ -57,7 +57,7 @@ main::before {
 
 #chart-outer {
   position: relative;
-  background-color: white;
+  background-color: #fbf6fc;
   width: 100%;
   height: 100%;
   position: relative;
@@ -161,11 +161,6 @@ a {
   color: inherit;
 }
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
 #container {
   z-index: -1 !important;
   position: absolute;
@@ -183,7 +178,7 @@ a {
 }
 
 .day {
-  background-image: linear-gradient(212deg, #7670ae, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
+  background-image: linear-gradient(212deg, #9c96d9, #f79ff6, #e45ecf 45%, #fbf6fc, #adb900);
 }
 
 .night {
@@ -233,6 +228,7 @@ header ul li {
 .ul-day {
   border-bottom: 1px solid #0e0a28;
   color: #0e0a28;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
 }
 
 .footer {
@@ -267,6 +263,7 @@ header ul li {
 .footer-day {
   border-top: 1px solid #0e0a28;
   color: #0e0a28;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
 }
 .footer-day__child {
   color: #0e0a28;

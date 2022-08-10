@@ -30,4 +30,9 @@
   &__child{
     color: var.$c-dark;
   }
+  background-image: linear-gradient( 
+    180deg,
+    var.$c-transparenter,
+    var.$c-transparent
+  );
 }
