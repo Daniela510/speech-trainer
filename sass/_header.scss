@@ -2,20 +2,20 @@
 header{
     position: absolute;
     top: 0;
-}
-header ul{
-    padding-bottom: 0.5vh;
-    padding-top: 2vh;
-    width: 90vw;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    pointer-events:none;
-    cursor: pointer;
-}
-header ul li{
-    padding: 0 2vh;
-    pointer-events: all;
+    ul{
+        padding-bottom: 0.5vh;
+        padding-top: 2vh;
+        width: 90vw;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        pointer-events:none;
+        cursor: pointer;
+        li{
+            padding: 0 2vh;
+            pointer-events: all;
+        }
+    }
 }
 .ul-night{
     border-bottom: 1px solid var.$c-light;

@@ -211,7 +211,6 @@ header {
   position: absolute;
   top: 0;
 }
-
 header ul {
   padding-bottom: 0.5vh;
   padding-top: 2vh;
@@ -222,7 +221,6 @@ header ul {
   pointer-events: none;
   cursor: pointer;
 }
-
 header ul li {
   padding: 0 2vh;
   pointer-events: all;
@@ -250,12 +248,10 @@ header ul li {
   padding-top: 0.5vh;
   padding-bottom: 2vh;
 }
-
 .footer ul {
   list-style: none;
   display: flex;
 }
-
 .footer ul li {
   padding: 0 2vh;
 }
@@ -293,16 +289,13 @@ header ul li {
   justify-content: space-between;
   margin-bottom: 1vh;
 }
-
 .rules ul {
   list-style-position: inside;
   padding: 0.5rem;
 }
-
 .rules p {
   padding: 0.5rem;
 }
-
 .rules button {
   opacity: 0.9;
   padding: 0.4rem 0.9rem;
@@ -313,7 +306,6 @@ header ul li {
   cursor: pointer;
   transition: 0.5s;
 }
-
 .rules button:hover {
   background-color: #7670ae;
   color: #fbf6fc;
