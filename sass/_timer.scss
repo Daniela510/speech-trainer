@@ -36,14 +36,17 @@
 .chart-night {
   opacity: 0.7;
 }
-.animationOff {
-  background: var.$c-green;
-}
 .animationOn {
   animation: timer 120s linear;
 }
-
+.celebrate{
+  animation: colorpop 2s ease-out;
+}
 @keyframes timer {
   from {width: 1%; height:1%; top: 50%; left:50%;}
    to {width: 101%; height:101%;top: -1%; left:-1%;}
    }
+@keyframes colorpop {
+  from {background-color: var.$c-pink;}
+  to {background-color: var.$c-green;}
+}

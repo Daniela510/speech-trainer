@@ -21,6 +21,7 @@ const startBtn = document.getElementById("start");
 const countdownP = document.getElementById("countdown");
 const topicContainer = document.getElementById("topic");
 const animationContainer = document.getElementById("chart-inner");
+const background = document.getElementById("main");
 
 const addSpice = () => {
   if (spiceTracker < 6) {
@@ -39,7 +40,8 @@ const addSpice = () => {
 };
 const cleanSlate = () => {
   topicContainer.innerHTML = "Done! Wanna play again?";
-  animationContainer.classList.add("animationOff");
+  topicContainer.classList.add("jiggle");
+  animationContainer.classList.add("celebrate");
   animationContainer.classList.remove("animationOn");
   startBtn.classList.remove("startOff");
   startBtn.classList.add("startActive")
@@ -47,7 +49,7 @@ const cleanSlate = () => {
   for (let i = 1; i < 6; i++) {
     wordConainer = document.getElementById(`w${i}`);
     wordConainer.innerHTML = "-------------------";
-  }
+  }  
 }
 
 const updateCountdown = () => {
@@ -74,14 +76,12 @@ const startCountdown = () => {
   countActive = 1;
   let topic = topics[Math.floor(Math.random() * topics.length)];
   topicContainer.innerHTML = topic;
-  spiceTimeout = setTimeout(addSpice, 10000)
+  let spiceTimeout = setTimeout(addSpice, 10000)
   spiceIntervalID = setInterval(addSpice, 20000);
-  animationContainer.classList.remove("animationOff");
+  animationContainer.classList.remove("celebrate");
   animationContainer.classList.add("animationOn");
+  topicContainer.classList.remve("jiggle");
   startBtn.classList.remove("startActive");
   startBtn.classList.add("startOff");
 };
 
-// listen productivity takes different shapes sometimes
-// no u are totally right i got too caught up w applications
-// my hard skills should be a priority
